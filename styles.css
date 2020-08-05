@@ -1,0 +1,16 @@
+.taskinactive {
+	display: none;
+}
+
+input {
+	border: none;
+}
+
+@font-face {
+	font-family: Google-sans;
+	src: url(fonts/GoogleSans-Regular-v1.27.ttf);
+}
+
+body {
+	font-family: Google-sans;
+}
