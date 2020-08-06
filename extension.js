@@ -90,7 +90,7 @@ document.getElementById("taskThreeinput").addEventListener('keyup', event => {
 // checks to see if there is a visible task, hides the task button if there are already visible tasks
 
 function getLength() {
-	if (firstTask.length > 0) {
+	if (firstTask.length > 1) {
 	var elem = document.getElementById("taskToggle");
 	elem.classList.add("taskinactive");
 }

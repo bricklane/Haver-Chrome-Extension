@@ -6,7 +6,7 @@ input {
 	border: none;
 	font-family: Google-sans;
 	width:300px;
-	color: grey;
+	color: #999999;
 	padding: 0;
 	margin: 0;
 }
@@ -24,7 +24,7 @@ textarea:focus, input:focus{
 body {
 	font-family: Google-sans;
 	font-size: 13px;
-	color: grey;
+	color: #999999;
 }
 
 .btn {
@@ -49,4 +49,33 @@ p {
 
 .notasks {
 	color: blue;
+}
+
+.hover {
+	visibility: visible;
+}
+
+.quoteText{
+	position: absolute;
+	margin: 21%;
+}
+p.mainquote{
+	font-size: 1.7em;
+	font-weight: 300;
+	font-family: google-sans;
+	color: #484848;
+	line-height: 1.5;
+	letter-spacing: .4;
+
+}
+
+li {
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.mainquote {
+	border-left: 4px #F8DEDC solid;
+	padding-left: 10px;
+
 }
