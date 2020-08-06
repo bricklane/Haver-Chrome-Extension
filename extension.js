@@ -40,7 +40,7 @@ document.getElementById("taskTwoinput").addEventListener('keyup', event => {
 		document.getElementById("taskThreeinput").focus();
 		getLength();
 		var taskTwovalue = document.createTextNode(secondTask);
-		taskTwo.prepend(taskTwovalue)
+		taskTwop.prepend(taskTwovalue)
 		var secondTaskinput = document.getElementById("taskTwoinput");
 		secondTaskinput.classList.add("taskinactive");
 
@@ -57,7 +57,7 @@ document.getElementById("taskThreeinput").addEventListener('keyup', event => {
 		document.getElementById("taskThreeinput").blur();
 		getLength();
 		var taskThreevalue = document.createTextNode(thirdTask);
-		taskThree.prepend(taskThreevalue)
+		taskThreep.prepend(taskThreevalue)
 		var thirdTaskinput = document.getElementById("taskThreeinput");
 		thirdTaskinput.classList.add("taskinactive");
 
@@ -70,7 +70,7 @@ document.getElementById("taskThreeinput").addEventListener('keyup', event => {
 // checks to see if there is a visible task, hides the task button if there are already visible tasks
 
 function getLength() {
-	if (firstTask.length > 1) {
+	if (firstTask.length > 0) {
 	var elem = document.getElementById("taskToggle");
 	elem.classList.add("taskinactive");
 }
@@ -91,16 +91,38 @@ function taskOnecomplete(){
 	$("ol").append($("#taskOne").detach());
 	var clearFirsttask = document.getElementById("taskOnep")
 	clearFirsttask.remove();
-	console.log(firstTask);
+
+	var firstTaskinput = document.getElementById("taskInput");
+	firstTaskinput.classList.remove("taskinactive");
+	firstTaskinput.value = "";
+	console.log(firstTask.length);
 
 }
 
 function taskTwocomplete(){
-	secondTask = 0;
+	secondTask = "";
+	var clearSecondtask = document.getElementById("taskTwo")
+	$("ol").append($("#taskTwo").detach());
+	var clearSecondtask = document.getElementById("taskTwop")
+	clearSecondtask.remove();
+
+	var secondTaskinput = document.getElementById("taskTwoinput");
+	secondTaskinput.classList.remove("taskinactive");
+	secondTaskinput.value = "";
+	console.log(secondTask.length);
 }
 
 function taskThreecomplete(){
-	thirdTask = 0;
+	thirdTask = "";
+	var clearThirdtask = document.getElementById("taskThree")
+	$("ol").append($("#taskThree").detach());
+	var clearThirdtask = document.getElementById("taskThreep")
+	clearThirdtask.remove();
+
+	var thirdTaskinput = document.getElementById("taskThreeinput");
+	thirdTaskinput.classList.remove("taskinactive");
+	thirdTaskinput.value = "";
+	console.log(thirdTask.length);
 }
 
 

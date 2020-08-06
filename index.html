@@ -15,15 +15,26 @@
  	<ol class="taskList" id="taskList" type="i"> Tasks
  		<li class="taskOne" id="taskOne">
  			<p id="taskOnep"></p>
- 			<input type="text" id="taskInput" placeholder="Add your task, duration" name="taskName"><button class="classOnebutton btn" onclick="taskOnecomplete()"><i class="far fa-check-circle" id="checkOne"></i></button>
+ 			<input type="text" id="taskInput" placeholder="Add your task, duration" name="taskName">
+ 			<button class="classOnebutton btn" onclick="taskOnecomplete()">
+ 				<i class="far fa-check-circle" id="checkOne"></i>
+ 		</button>
  		</li>
 
- 		<li class="taskTwo taskTwoinactive" id="taskTwo">
- 			<input type="text" id="taskTwoinput" placeholder="Add your task, duration" name="taskTwoname"><i class="far fa-check-circle" onclick="taskTwocomplete()"  id="checkTwo"></i>
+ 		<li class="taskTwo" id="taskTwo">
+ 			<p id="taskTwop"></p>
+ 			<input type="text" id="taskTwoinput" class="" placeholder="Add your task, duration" name="taskTwoname">
+ 			<button class="classTwobutton btn" onclick="taskTwocomplete()">
+ 				<i class="far fa-check-circle" id="checkTwo"></i>
+ 			</button>
  		</li>
 
  		<li class="taskThree taskThreeinactive" id="taskThree">
- 			<input type="text" id="taskThreeinput" placeholder="Add your task, duration" name="taskThreename"> <i class="far fa-check-circle" onclick="taskThreecomplete()" id="checkThree"></i>
+ 			<p id="taskThreep"></p>
+ 			<input type="text" id="taskThreeinput" placeholder="Add your task, duration" name="taskThreename"> 
+ 			<button class="classThreebutton btn" onclick="taskThreecomplete()">
+ 				<i class="far fa-check-circle" id="checkThree"></i>
+ 			</button>
  		</li>
  	</ol>
  	<button type="button" class="" onclick="taskToggle()" id="taskToggle">Toggle</button>
