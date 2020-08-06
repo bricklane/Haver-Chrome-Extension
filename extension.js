@@ -6,7 +6,10 @@ let secondTask;
 let thirdTask;
 
 let currentTasks;
-currentTasks = "";
+currentTasks = "0";
+
+window.onload = displayCount();
+window.onload = console.log(currentTasks);
 
 firstTask = "";
 secondTask = "";
@@ -15,6 +18,7 @@ thirdTask = "";
 var taskOne = document.getElementById("taskOne");
 var taskTwo = document.getElementById("taskTwo");
 var taskThree = document.getElementById("taskThree");
+
 
 
 //hit enter key and it adds the value to the variable, *checks to see if there are less than 3, *creates a duplicate, *moves selected input to the next one 
@@ -35,6 +39,8 @@ document.getElementById("taskInput").addEventListener('keyup', event => {
 		var firstTaskinput = document.getElementById("taskInput");
 		firstTaskinput.classList.add("taskinactive");
 		displayCount();
+		var buttonOne = document.getElementById("buttonOne");
+		buttonOne.classList.remove("taskinactive");
 	}
 })
 
@@ -53,6 +59,8 @@ document.getElementById("taskTwoinput").addEventListener('keyup', event => {
 		var secondTaskinput = document.getElementById("taskTwoinput");
 		secondTaskinput.classList.add("taskinactive");
 		displayCount();
+		var buttonTwo = document.getElementById("buttonTwo");
+		buttonTwo.classList.remove("taskinactive");
 	}
 })
 
@@ -71,6 +79,8 @@ document.getElementById("taskThreeinput").addEventListener('keyup', event => {
 		var thirdTaskinput = document.getElementById("taskThreeinput");
 		thirdTaskinput.classList.add("taskinactive");
 		displayCount();
+		var buttonThree = document.getElementById("buttonThree");
+		buttonThree.classList.remove("taskinactive");
 	}
 })
 
@@ -108,7 +118,8 @@ function taskOnecomplete(){
 	currentTasks = currentTasks - 1;
 	console.log(currentTasks);
 	displayCount();
-	//console.log(firstTask.length);
+	var buttonOne = document.getElementById("buttonOne");
+	buttonOne.classList.add("taskinactive");
 
 }
 
@@ -125,7 +136,8 @@ function taskTwocomplete(){
 	currentTasks = currentTasks - 1;
 	console.log(currentTasks);
 	displayCount();
-	//console.log(secondTask.length);
+	var buttonTwo = document.getElementById("buttonTwo");
+	buttonTwo.classList.add("taskinactive");
 }
 
 function taskThreecomplete(){
@@ -141,25 +153,31 @@ function taskThreecomplete(){
 	currentTasks = currentTasks - 1;
 	console.log(currentTasks);
 	displayCount();
-	//console.log(thirdTask.length);
+	var buttonThree = document.getElementById("buttonThree");
+		buttonThree.classList.add("taskinactive");
 }
 
+
+
 function displayCount () {
-	if (currentTasks === 1) {
-		//$('.tasks li:gt(1)').hide();
+	if (currentTasks == 0) {
+		console.log("no tasks");
+		document.getElementsByTagName("li")[2].style.display = "none";
+		document.getElementsByTagName("li")[1].style.display = "none";
+	}
+	if (currentTasks == 1) {
+		document.getElementsByTagName("li")[1].style.display = "list-item";
+		document.getElementsByTagName("li")[2].style.display = "none";
 		console.log("one task");
 	}
 	if (currentTasks === 2) {
-		//$('.tasks li:gt(1)').hide();
+		document.getElementsByTagName("li")[1].style.display = "list-item";
+		document.getElementsByTagName("li")[2].style.display = "list-item";
 		console.log("two tasks");
 	}
 	if (currentTasks === 3) {
-		//$('.tasks li:gt(1)').hide();
+		$('.tasks li:gt(3)').hide();
 		console.log("three tasks");
-	}
-	if (currentTasks === 0) {
-		//$('.tasks li:gt(1)').hide();
-		console.log("no tasks");
 	}
 }
 

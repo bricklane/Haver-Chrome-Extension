@@ -11,12 +11,12 @@
  <div class="quote">
  </div>
 
- <div class="tasks">
+ <div class="tasks" id="tasks">
  	<ol class="taskList" id="taskList" type="i"> Tasks
  		<li class="taskOne" id="taskOne">
  			<p id="taskOnep"></p>
  			<input type="text" id="taskInput" placeholder="Add your task, duration" name="taskName">
- 			<button class="classOnebutton btn" onclick="taskOnecomplete()">
+ 			<button class="classOnebutton btn taskinactive" onclick="taskOnecomplete()" id="buttonOne">
  				<i class="far fa-check-circle" id="checkOne"></i>
  		</button>
  		</li>
@@ -24,7 +24,7 @@
  		<li class="taskTwo" id="taskTwo">
  			<p id="taskTwop"></p>
  			<input type="text" id="taskTwoinput" class="" placeholder="Add your task, duration" name="taskTwoname">
- 			<button class="classTwobutton btn" onclick="taskTwocomplete()">
+ 			<button class="classTwobutton btn taskinactive" onclick="taskTwocomplete()" id="buttonTwo">
  				<i class="far fa-check-circle" id="checkTwo"></i>
  			</button>
  		</li>
@@ -32,7 +32,7 @@
  		<li class="taskThree taskThreeinactive" id="taskThree">
  			<p id="taskThreep"></p>
  			<input type="text" id="taskThreeinput" placeholder="Add your task, duration" name="taskThreename"> 
- 			<button class="classThreebutton btn" onclick="taskThreecomplete()">
+ 			<button class="classThreebutton btn taskinactive" onclick="taskThreecomplete()" id="buttonThree">
  				<i class="far fa-check-circle" id="checkThree"></i>
  			</button>
  		</li>
