@@ -25,7 +25,7 @@ document.getElementById("taskInput").addEventListener('keyup', event => {
 		document.getElementById("taskTwoinput").focus();
 		getLength();
 		var taskOnevalue = document.createTextNode(firstTask);
-		taskOne.prepend(taskOnevalue)
+		taskOnep.prepend(taskOnevalue)
 		var firstTaskinput = document.getElementById("taskInput");
 		firstTaskinput.classList.add("taskinactive");
 	}
@@ -85,9 +85,25 @@ function taskToggle() {
 	elem.classList.toggle("taskinactive");
 }
 
+function taskOnecomplete(){
+	firstTask = "";
+	var clearFirsttask = document.getElementById("taskOne")
+	$("ol").append($("#taskOne").detach());
+	var clearFirsttask = document.getElementById("taskOnep")
+	clearFirsttask.remove();
+	console.log(firstTask);
+
+}
+
+function taskTwocomplete(){
+	secondTask = 0;
+}
+
+function taskThreecomplete(){
+	thirdTask = 0;
+}
 
 
-getLength();
 
 
 

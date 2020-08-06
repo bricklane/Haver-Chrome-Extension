@@ -14,15 +14,16 @@
  <div class="tasks">
  	<ol class="taskList" id="taskList" type="i"> Tasks
  		<li class="taskOne" id="taskOne">
- 			<input type="text" id="taskInput" placeholder="Add your task, duration" name="taskName"><i class="far fa-check-circle taskinactive" id="checkTwo"></i>
+ 			<p id="taskOnep"></p>
+ 			<input type="text" id="taskInput" placeholder="Add your task, duration" name="taskName"><button class="classOnebutton btn" onclick="taskOnecomplete()"><i class="far fa-check-circle" id="checkOne"></i></button>
  		</li>
 
  		<li class="taskTwo taskTwoinactive" id="taskTwo">
- 			<input type="text" id="taskTwoinput" placeholder="Add your task, duration" name="taskTwoname"><i class="far fa-check-circle"></i>
+ 			<input type="text" id="taskTwoinput" placeholder="Add your task, duration" name="taskTwoname"><i class="far fa-check-circle" onclick="taskTwocomplete()"  id="checkTwo"></i>
  		</li>
 
  		<li class="taskThree taskThreeinactive" id="taskThree">
- 			<input type="text" id="taskThreeinput" placeholder="Add your task, duration" name="taskThreename"> <i class="far fa-check-circle"></i>
+ 			<input type="text" id="taskThreeinput" placeholder="Add your task, duration" name="taskThreename"> <i class="far fa-check-circle" onclick="taskThreecomplete()" id="checkThree"></i>
  		</li>
  	</ol>
  	<button type="button" class="" onclick="taskToggle()" id="taskToggle">Toggle</button>
