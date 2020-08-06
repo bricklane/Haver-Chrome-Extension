@@ -5,6 +5,9 @@ let firstTask;
 let secondTask;
 let thirdTask;
 
+let currentTasks;
+currentTasks = "";
+
 firstTask = "";
 secondTask = "";
 thirdTask = "";
@@ -20,14 +23,18 @@ document.getElementById("taskInput").addEventListener('keyup', event => {
 	if (event.keyCode === 13) {
 
 		firstTask = (event.currentTarget.value);
-		console.log(firstTask);
-		console.log(secondTask.length + firstTask.length);
+
+		//console.log(firstTask);
+		//console.log(secondTask.length + firstTask.length);
 		document.getElementById("taskTwoinput").focus();
 		getLength();
+		currentTasks ++;
+		console.log(currentTasks);
 		var taskOnevalue = document.createTextNode(firstTask);
 		taskOnep.prepend(taskOnevalue)
 		var firstTaskinput = document.getElementById("taskInput");
 		firstTaskinput.classList.add("taskinactive");
+		displayCount();
 	}
 })
 
@@ -35,16 +42,17 @@ document.getElementById("taskTwoinput").addEventListener('keyup', event => {
 	if (event.keyCode === 13) {
 
 		secondTask = (event.currentTarget.value);
-		console.log(secondTask);
-		console.log(secondTask.length + firstTask.length);
+		currentTasks ++;
+		console.log(currentTasks);
+		//console.log(secondTask);
+		//console.log(secondTask.length + firstTask.length);
 		document.getElementById("taskThreeinput").focus();
 		getLength();
 		var taskTwovalue = document.createTextNode(secondTask);
 		taskTwop.prepend(taskTwovalue)
 		var secondTaskinput = document.getElementById("taskTwoinput");
 		secondTaskinput.classList.add("taskinactive");
-
-
+		displayCount();
 	}
 })
 
@@ -52,15 +60,17 @@ document.getElementById("taskThreeinput").addEventListener('keyup', event => {
 	if (event.keyCode === 13) {
 
 		thirdTask = (event.currentTarget.value);
-		console.log(thirdTask);
-		console.log(thirdTask.length + secondTask.length + firstTask.length);
+		currentTasks ++;
+		console.log(currentTasks);
+		//console.log(thirdTask);
+		//console.log(thirdTask.length + secondTask.length + firstTask.length);
 		document.getElementById("taskThreeinput").blur();
 		getLength();
 		var taskThreevalue = document.createTextNode(thirdTask);
 		taskThreep.prepend(taskThreevalue)
 		var thirdTaskinput = document.getElementById("taskThreeinput");
 		thirdTaskinput.classList.add("taskinactive");
-
+		displayCount();
 	}
 })
 
@@ -95,7 +105,10 @@ function taskOnecomplete(){
 	var firstTaskinput = document.getElementById("taskInput");
 	firstTaskinput.classList.remove("taskinactive");
 	firstTaskinput.value = "";
-	console.log(firstTask.length);
+	currentTasks = currentTasks - 1;
+	console.log(currentTasks);
+	displayCount();
+	//console.log(firstTask.length);
 
 }
 
@@ -109,7 +122,10 @@ function taskTwocomplete(){
 	var secondTaskinput = document.getElementById("taskTwoinput");
 	secondTaskinput.classList.remove("taskinactive");
 	secondTaskinput.value = "";
-	console.log(secondTask.length);
+	currentTasks = currentTasks - 1;
+	console.log(currentTasks);
+	displayCount();
+	//console.log(secondTask.length);
 }
 
 function taskThreecomplete(){
@@ -122,9 +138,30 @@ function taskThreecomplete(){
 	var thirdTaskinput = document.getElementById("taskThreeinput");
 	thirdTaskinput.classList.remove("taskinactive");
 	thirdTaskinput.value = "";
-	console.log(thirdTask.length);
+	currentTasks = currentTasks - 1;
+	console.log(currentTasks);
+	displayCount();
+	//console.log(thirdTask.length);
 }
 
+function displayCount () {
+	if (currentTasks === 1) {
+		//$('.tasks li:gt(1)').hide();
+		console.log("one task");
+	}
+	if (currentTasks === 2) {
+		//$('.tasks li:gt(1)').hide();
+		console.log("two tasks");
+	}
+	if (currentTasks === 3) {
+		//$('.tasks li:gt(1)').hide();
+		console.log("three tasks");
+	}
+	if (currentTasks === 0) {
+		//$('.tasks li:gt(1)').hide();
+		console.log("no tasks");
+	}
+}
 
 
 

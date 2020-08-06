@@ -4,6 +4,14 @@
 
 input {
 	border: none;
+	font-family: Google-sans;
+	width:300px;
+	color: grey;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    /*border-bottom: 1px black solid;*/
 }
 
 @font-face {
@@ -13,13 +21,15 @@ input {
 
 body {
 	font-family: Google-sans;
+	font-size: 13px;
+	color: grey;
 }
 
 .btn {
   background-color: white; /* Blue background */
   border: none; /* Remove borders */
-  color: black; /* White text */
-  font-size: 16px; /* Set a font size */
+  color: grey; /* White text */
+  font-size: 13px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
   padding: 0px !important;
 }
@@ -28,4 +38,9 @@ p {
 	padding: 0;
 	margin: 0;
 	display: inline-block;
+}
+
+.tasklist {
+	position: absolute;
+	bottom: 20px;
 }
