@@ -90,7 +90,7 @@ function taskOnecomplete(){
 	var clearFirsttask = document.getElementById("taskOne")
 	$("ol").append($("#taskOne").detach());
 	var clearFirsttask = document.getElementById("taskOnep")
-	clearFirsttask.remove();
+	clearFirsttask.innerHTML = "";
 
 	var firstTaskinput = document.getElementById("taskInput");
 	firstTaskinput.classList.remove("taskinactive");
@@ -104,7 +104,7 @@ function taskTwocomplete(){
 	var clearSecondtask = document.getElementById("taskTwo")
 	$("ol").append($("#taskTwo").detach());
 	var clearSecondtask = document.getElementById("taskTwop")
-	clearSecondtask.remove();
+	clearSecondtask.innerHTML = "";
 
 	var secondTaskinput = document.getElementById("taskTwoinput");
 	secondTaskinput.classList.remove("taskinactive");
@@ -117,7 +117,7 @@ function taskThreecomplete(){
 	var clearThirdtask = document.getElementById("taskThree")
 	$("ol").append($("#taskThree").detach());
 	var clearThirdtask = document.getElementById("taskThreep")
-	clearThirdtask.remove();
+	clearThirdtask.innerHTML = "";
 
 	var thirdTaskinput = document.getElementById("taskThreeinput");
 	thirdTaskinput.classList.remove("taskinactive");
