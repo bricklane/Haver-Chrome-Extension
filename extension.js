@@ -183,9 +183,37 @@ function displayCount () {
 
 
 
+// function to add bookmarks 
+
+let bookmarkURL;
+let bookmark;
+
+document.getElementById("bookmarkInput").addEventListener('keyup', event => {
+	if (event.keyCode === 13) {
+		//console.log("working")
+		var inputValue = document.getElementById("bookmarkInput").value;
+		var t = document.createTextNode(inputValue);
+		var li = document.createElement("li");
+		var ul = document.getElementById("bookmark-list");
+		li.appendChild(t);
+		ul.appendChild(li);
+		console.log(inputValue)
+		//bookmarks();
+}})
 
 
 
+function bookmarks() {
+  var ul = document.getElementById("bookmark-list");
+  var inputValue = document.getElementById("bookmarkInput").value;
+  var li = document.createElement("li");
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  ul.appendChild(li)
+document.getElementById("bookmarkInput").value = "";
+}
+
+// function to get bookmark images
 
 
 
